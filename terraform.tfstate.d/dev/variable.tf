@@ -1,9 +1,11 @@
 variable "ncloud_access_key" { 
-#  default = "MJA1GABDQemrCVkO171Y"
+  description = "The access key for ncloud"
+  type = string
 }
 
 variable "ncloud_secret_key" { 
-#  default = "PF7pW0KFkqaGHaervbbxg6l9w2R1OfpW0DaE903k"
+  description = "The secret key for ncloud"
+  type = string
 }
 
 variable "region" {
