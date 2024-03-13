@@ -9,7 +9,7 @@ resource "local_file" "ssh_key" {
 
 resource "ncloud_server" "dev-web-01" {
   subnet_no = ncloud_subnet.web-subnet-1.id
-  name = "dev-web-01"
+  name = var.web_server_1
   member_server_image_no = data.ncloud_member_server_image.member_server_base_image.id
   server_product_code = data.ncloud_server_product.stand_product.id
   login_key_name = ncloud_login_key.loginkey.key_name
@@ -30,7 +30,7 @@ output "dev-web-01-pub" {
 
 resource "ncloud_server" "dev-was-01" {
   subnet_no = ncloud_subnet.was-subnet-1.id
-  name = "dev-was-01"
+  name = var.was_server_1
   member_server_image_no = data.ncloud_member_server_image.member_server_base_image.id
   server_product_code = data.ncloud_server_product.stand_product.id
   login_key_name = ncloud_login_key.loginkey.key_name
@@ -42,7 +42,7 @@ resource "ncloud_server" "dev-was-01" {
 
 resource "ncloud_server" "dev-db-01" {
   subnet_no = ncloud_subnet.db-subnet-1.id
-  name = "dev-db-01"
+  name = var.db_server_1
   member_server_image_no = data.ncloud_member_server_image.member_server_base_image.id
   server_product_code = data.ncloud_server_product.stand_product.id
   login_key_name = ncloud_login_key.loginkey.key_name

@@ -91,3 +91,15 @@ variable "db_nic_1_name" {
 variable "db_server_1_ip" {
   default = "172.20.20.20"
 }
+
+variable "web_server_1" {
+  default = "dev-web-01"
+}
+
+variable "was_server_1" {
+  default = "dev-was-01"
+}
+
+variable "db_server_1" {
+  default = "dev-db-01"
+}
