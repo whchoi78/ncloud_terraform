@@ -6,7 +6,7 @@ resource "ncloud_vpc" "prd-ncloud_vpc" {
 resource "ncloud_network_acl" "prd-nacl" {
   vpc_no = ncloud_vpc.prd-ncloud_vpc.id
   name = var.default_nacl_name
-  description = "test by terraform"
+  description = var.description
 }
 
 resource "ncloud_network_acl_rule" "prd-nacl-rule" {
@@ -109,7 +109,7 @@ resource "ncloud_subnet" "lb-subnet-pub" {
   zone = "KR-1"
   subnet_type = "PUBLIC"
   name = var.lb_subnet_pub_name
-  usage_type = "GEN"
+  usage_type = "LOADB"
 }
 
 resource "ncloud_subnet" "lb-subnet-pri" {
@@ -119,7 +119,7 @@ resource "ncloud_subnet" "lb-subnet-pri" {
   zone = "KR-1"
   subnet_type = "PRIVATE"
   name = var.lb_subnet_pri_name
-  usage_type = "GEN"
+  usage_type = "LOADB"
 }
 
 resource "ncloud_subnet" "nat-subnet" {

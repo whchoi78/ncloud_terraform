@@ -20,6 +20,10 @@ variable "support_vpc" {
   default = "true"
 }
 
+variable "description" {
+  default = "created by terraform"
+}
+
 variable "vpc_name" {
   default = "prd-vpc"
 }
@@ -108,6 +112,22 @@ variable "nat_gateway_name" {
   default = "prd-nat-gw"
 }
 
+variable "web_acg_name" {
+  default = "prd-web-acg"
+}
+
+variable "was_acg_name" {
+  default = "prd-was-acg"
+}
+
+variable "db_acg_name" {
+  default = "prd-db-acg"
+}
+
+variable "com_acg_name" {
+  default = "com-db-acg"
+}
+
 variable "web_nic_1_name" {
   default = "prd-web-nic-1"
 }
@@ -156,4 +176,42 @@ variable "db_server_2_ip" {
   default = "172.21.25.25"
 }
 
+variable "web_01_name" {
+  default = "prd-web-01"
+}
 
+variable "web_02_name" {
+  default = "prd-web-02"
+}
+
+variable "was_01_name" {
+  default = "prd-was-01"
+}
+
+variable "was_02_name" {
+  default = "prd-was-02"
+}
+
+variable "db_01_name" {
+  default = "prd-db-01"
+}
+
+variable "db_02_name" {
+  default = "prd-db-02"
+}
+
+variable "web_lb" {
+  default = "prd-web-lb"
+}
+
+variable "web_tg" {
+  default = "prd-web-tg"
+}
+
+variable "was_lb" {
+  default = "prd-was-lb"
+}
+
+variable "was_tg" {
+  default = "prd-was-tg"
+}
