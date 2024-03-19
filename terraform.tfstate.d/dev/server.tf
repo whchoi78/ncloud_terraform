@@ -17,11 +17,12 @@ resource "ncloud_server" "dev-web-01" {
     network_interface_no = ncloud_network_interface.web-nic-1.id
     order = 0
   }
+  description = var.description
 }
 
 resource "ncloud_public_ip" "dev-web-01-pub" {
   server_instance_no = ncloud_server.dev-web-01.id
-  description = "dev-web-01-pub-ip"
+  description = var.description
 }
 
 output "dev-web-01-pub" {
@@ -38,6 +39,7 @@ resource "ncloud_server" "dev-was-01" {
     network_interface_no = ncloud_network_interface.was-nic-1.id
     order = 0
   }
+  description = var.description
 }
 
 resource "ncloud_server" "dev-db-01" {
@@ -50,4 +52,5 @@ resource "ncloud_server" "dev-db-01" {
     network_interface_no = ncloud_network_interface.db-nic-1.id
     order = 0
   }
+  description = var.description
 }

@@ -1,25 +1,25 @@
 resource "ncloud_access_control_group" "web-acg" {
-  name = "web-dev-acg"
+  name = var.web_acg_name
   vpc_no = ncloud_vpc.dev-ncloud_vpc.id
-  description = "web access control group"
+  description = var.description
 }
 
 resource "ncloud_access_control_group" "was-acg" {
-  name = "was-dev-acg"
+  name = var.was_acg_name
   vpc_no = ncloud_vpc.dev-ncloud_vpc.id
-  description = "was access control group"
+  description = var.description
 }
 
 resource "ncloud_access_control_group" "db-acg" {
-  name = "db-dev-acg"
+  name = var.db_acg_name
   vpc_no = ncloud_vpc.dev-ncloud_vpc.id
-  description = "DB access control group"
+  description = var.description
 }
 
 resource "ncloud_access_control_group" "common-acg" {
-  name = "common-dev-acg"
+  name = var.com_acg_name
   vpc_no = ncloud_vpc.dev-ncloud_vpc.id
-  description = "common access control group"
+  description = var.description
 }
 
 resource "ncloud_access_control_group_rule" "web-acg-rule" {

@@ -6,7 +6,7 @@ resource "ncloud_vpc" "dev-ncloud_vpc" {
 resource "ncloud_network_acl" "dev-nacl" {
   vpc_no = ncloud_vpc.dev-ncloud_vpc.id
   name = var.default_nacl_name
-  description = "test by terraform"
+  description = var.description
 }
 
 resource "ncloud_network_acl_rule" "dev-nacl-rule" {
@@ -87,7 +87,7 @@ resource "ncloud_nat_gateway" "nat_gateway" {
   subnet_no = ncloud_subnet.nat-subnet.id
   zone = "KR-1"
   name = var.nat_gateway_name
-  description = "test_nat_gw"
+  description = var.description
 }
 
 resource "ncloud_route" "pri-route-rule" {

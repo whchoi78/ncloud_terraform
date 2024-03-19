@@ -68,58 +68,6 @@ variable "nat_gateway_name" {
   default = "dev-nat-gw"
 }
 
-variable "web_acg_name" {
-  default = "web-dev-acg"
-}
-
-variable "was_acg_name" {
-  default = "was-dev-acg"
-}
-
-variable "db_acg_name" {
-  default = "db-dev-acg"
-}
-
-variable "com_acg_name" {
-  default = "com-dev-acg"
-}
-
-variable "web_nic_1_name" {
-  default = "web-nic-1"
-}
-
-variable "web_server_1_ip" {
-  default = "172.20.0.10"
-}
-
-variable "was_nic_1_name" {
-  default = "was-nic-1"
-}
-
-variable "was_server_1_ip" {
-  default = "172.20.10.15"
-}
-
-variable "db_nic_1_name" {
-  default = "db-nic-1"
-}
-
-variable "db_server_1_ip" {
-  default = "172.20.20.20"
-}
-
-variable "web_server_1" {
-  default = "dev-web-01"
-}
-
-variable "was_server_1" {
-  default = "dev-was-01"
-}
-
-variable "db_server_1" {
-  default = "dev-db-01"
-}
-
 variable "description" {
   default = "created by terraform"
 }
